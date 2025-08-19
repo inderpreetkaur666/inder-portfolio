@@ -1,116 +1,59 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>HealthifyMe – Lifecycle Marketing</title>
-  <link rel="stylesheet" href="assets/styles.css" />
-  <style>
-    .svg-card {width:100%;height:220px;border-radius:14px;display:block}
-    .svg-wrap{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:10px}
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HealthifyMe — Lifecycle Marketing</title>
+  <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body class="bg-anim">
   <div class="floaty f1"></div><div class="floaty f2"></div><div class="floaty f3"></div>
-  <div class="container">
-    <header class="header">
-      <div class="logo">Inderpreet Kaur</div>
-      <nav class="nav">
-        <a href="index.html">Home</a>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </header>
 
-    <section class="section reveal">
-      <a href="portfolio.html" class="card">← Back to all case studies</a>
+  <div class="case">
+    <a href="portfolio.html" class="back-link">← Back to all case studies</a>
+
+    <section class="case-hero reveal" style="--accent:#fb7185">
       <h1>HealthifyMe — Lifecycle Marketing</h1>
-      <p class="badge">B2C • Journeys • Email/SMS/App Push • Experimentation</p>
+      <div class="pills"><span class="pill">Lifecycle</span><span class="pill">CRM</span><span class="pill">Experimentation</span></div>
+      <p class="sub">Strengthened engagement and re-engagement through email, SMS, and app push, mapped to journeys and seasonal themes.</p>
+
+      <aside class="hero-note">
+        <h4>Snapshot</h4>
+        <p>Message matrix + dashboard + test plan → consistent improvements in activation and retention.</p>
+      </aside>
     </section>
 
-    <section class="section reveal">
-      <div class="grid">
-        <div class="card">
-          <h3>Situation</h3>
-          <p>Grow activation and retention with messaging tailored to user intent and lifecycle stage across email, SMS, and in-app.</p>
-        </div>
-        <div class="card">
-          <h3>My Role</h3>
-          <p>Mapped onboarding → activation → retention journeys and set variant tests to optimize timing and content.</p>
-        </div>
-        <div class="card">
-          <h3>Approach</h3>
-          <ul>
-            <li>Lifecycle map + message matrix by segment and trigger.</li>
-            <li>A/B test matrix for subject lines, CTAs, and send time.</li>
-            <li>Dashboard to monitor journey performance.</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Results</h3>
-          <ul>
-            <li>Higher activation from onboarding nudges.</li>
-            <li>Improved weekly retention from value reminders.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+    <h2>Approach</h2>
+    <ul class="steps reveal">
+      <li>Journey map (onboarding → activation → retention).</li>
+      <li>A/B test matrix for subject lines, sends, and content.</li>
+      <li>Lifecycle dashboard to monitor cohort changes.</li>
+    </ul>
 
-    <section class="section reveal">
-      <h2>Selected Work Snips</h2>
-      <div class="grid">
-        <div class="card snip">
-          <div class="title">Lifecycle Map</div>
-          <p>Onboarding → activation → retention paths.</p>
-          <div class="svg-wrap">
-            <svg class="svg-card" viewBox="0 0 900 400" xmlns="http://www.w3.org/2000/svg" aria-label="Lifecycle map mock">
-              <rect width="900" height="400" rx="14" fill="rgba(255,255,255,.02)"/>
-              <g>
-                <rect x="90" y="120" width="180" height="70" rx="10" fill="#9df3c4"/>
-                <rect x="360" y="120" width="180" height="70" rx="10" fill="#ffd37d"/>
-                <rect x="630" y="120" width="180" height="70" rx="10" fill="#86c2ff"/>
-                <text x="130" y="160" font-family="Inter" font-size="14" fill="#003d22">Onboarding</text>
-                <text x="410" y="160" font-family="Inter" font-size="14" fill="#4a2b00">Activation</text>
-                <text x="690" y="160" font-family="Inter" font-size="14" fill="#002a70">Retention</text>
-              </g>
-              <g stroke="rgba(255,255,255,.8)" stroke-width="3" fill="none">
-                <path d="M270,155 H360"/>
-                <path d="M540,155 H630"/>
-              </g>
-            </svg>
-          </div>
-        </div>
+    <h2>Interactive samples</h2>
+    <div class="mock-grid reveal">
+      <a class="tile" href="#" style="--t1:#fb7185;--t2:#f472b6">
+        <div class="t-cap">Lifecycle Map</div>
+        <div class="t-sub">Triggers, guardrails, messaging themes.</div>
+        <div class="art"></div>
+      </a>
+      <a class="tile" href="#" style="--t1:#fbbf24;--t2:#34d399">
+        <div class="t-cap">A/B Test Matrix</div>
+        <div class="t-sub">Subjects, cadence, experiment log.</div>
+        <div class="art"></div>
+      </a>
+      <a class="tile" href="#" style="--t1:#60a5fa;--t2:#22d3ee">
+        <div class="t-cap">Message Dashboard</div>
+        <div class="t-sub">Cohorts and message performance.</div>
+        <div class="art"></div>
+      </a>
+    </div>
 
-        <div class="card snip">
-          <div class="title">A/B Test Matrix</div>
-          <p>Subject lines, message variants, send-time tests.</p>
-          <div class="svg-wrap">
-            <svg class="svg-card" viewBox="0 0 900 400" xmlns="http://www.w3.org/2000/svg" aria-label="AB test mock">
-              <rect width="900" height="400" rx="14" fill="rgba(255,255,255,.02)"/>
-              <g font-family="Inter" font-size="13" fill="#e9f2ff">
-                <text x="120" y="120">Variant</text><text x="240" y="120">Open</text><text x="330" y="120">Click</text>
-                <text x="120" y="150">A — “Start today”</text><text x="240" y="150">24%</text><text x="330" y="150">6.2%</text>
-                <text x="120" y="180">B — “Ready when you are”</text><text x="240" y="180">28%</text><text x="330" y="180">7.1%</text>
-              </g>
-              <g stroke="rgba(255,255,255,.14)">
-                <line x1="100" y1="130" x2="800" y2="130"/>
-                <line x1="100" y1="160" x2="800" y2="160"/>
-                <line x1="100" y1="190" x2="800" y2="190"/>
-              </g>
-            </svg>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer class="footer">
-      © Inderpreet Kaur • Ontario, Canada •
+    <footer class="footer">© Inderpreet Kaur • Ontario, Canada •
       <a href="mailto:inderpreetkaur666@gmail.com">inderpreetkaur666@gmail.com</a> • +1 4383558066
     </footer>
   </div>
-  <script>document.documentElement.classList.add('js');</script>
+
   <script src="assets/site.js"></script>
 </body>
 </html>
-
