@@ -59,7 +59,17 @@ a:hover { text-decoration:underline; }
     radial-gradient(1000px 500px at 110% 10%,#1a2446 0%,transparent 60%),
     linear-gradient(120deg,#1c2341,#0c1020);
   position:relative;
-  overflow:hidden;
+ /* allow scrolling; only hide horizontal overflow for the glows */
+.bg-anim {
+  background:
+    radial-gradient(1200px 600px at 10% -10%, #18203e 0%, transparent 60%),
+    radial-gradient(1000px 500px at 110% 10%, #1a2446 0%, transparent 60%),
+    linear-gradient(120deg, #1c2341, #0c1020);
+  position: relative;
+  overflow-x: hidden;   /* was overflow: hidden */
+  /* remove overflow-y restriction so the page can scroll */
+}
+
 }
 .floaty { position:absolute; border-radius:50%; filter:blur(30px); opacity:.35; mix-blend-mode:screen; }
 .f1 { width:340px; height:340px; background:conic-gradient(from 0deg,var(--brand),var(--brand2)); left:-60px; top:60px; animation:float1 18s ease-in-out infinite; }
