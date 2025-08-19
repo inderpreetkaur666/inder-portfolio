@@ -1,3 +1,4 @@
+document.documentElement.classList.add('js');
 
 (function () {
   // Get current page name (defaults to index.html)
