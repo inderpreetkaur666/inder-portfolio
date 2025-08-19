@@ -266,3 +266,109 @@ html, body {
 
 /* belts & suspenders: links render above anything weird */
 a { position: relative; z-index: 2; }
+
+
+/* =========================
+   CASE STUDY UI (drop-in)
+   ========================= */
+
+:root{
+  --case-pad: 22px;
+  --case-radius: 16px;
+  --case-glow: 0 10px 30px rgba(0,0,0,.35);
+}
+
+/* Case wrapper */
+.case {max-width: 1080px; margin: 56px auto 120px; padding: 0 var(--case-pad);}
+
+/* Back link */
+.back-link{display:inline-flex;gap:10px;align-items:center;margin:6px 0 18px;color:#d6dcff;}
+.back-link:hover{filter:brightness(1.1); text-decoration:underline;}
+
+/* Colorful hero */
+.case-hero{
+  --accent: #5aa9ff;            /* default; per-page override inline */
+  background:
+    radial-gradient(1200px 600px at 0% 10%, rgba(255,255,255,.06) 0, transparent 60%),
+    radial-gradient(1000px 500px at 110% 10%, rgba(255,255,255,.04) 0, transparent 60%),
+    linear-gradient(135deg, color-mix(in srgb, var(--accent) 70%, #182036) 0%, #111827 70%);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius: calc(var(--case-radius) + 6px);
+  box-shadow: var(--case-glow);
+  padding: 30px var(--case-pad);
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+}
+.case-hero h1{font-size: clamp(28px, 3.2vw, 40px); margin: 4px 0 14px;}
+.case-hero .sub{opacity:.85; line-height:1.5; max-width: 78ch;}
+/* hero tags */
+.pills{display:flex; flex-wrap:wrap; gap:8px; margin:12px 0 6px}
+.pill{font-size:12px; letter-spacing:.2px; padding:6px 10px; border-radius:999px;
+  border:1px solid rgba(255,255,255,.18); background:rgba(255,255,255,.06)}
+/* right card */
+.hero-note{
+  position: absolute; right: var(--case-pad); top: var(--case-pad);
+  width:min(340px, 42%); padding:14px 16px; border-radius:14px;
+  border:1px solid rgba(255,255,255,.14); background:rgba(17,24,39,.6);
+  box-shadow: 0 10px 24px rgba(0,0,0,.25); backdrop-filter:saturate(120%) blur(6px);
+}
+.hero-note h4{margin:0 0 6px; font-weight:600}
+.hero-note p{opacity:.9; line-height:1.5}
+
+/* Section headings */
+.case h2{font-size:18px; letter-spacing:.6px; opacity:.9; margin:22px 0 10px}
+.case .lead{opacity:.9;}
+
+/* Bullet list nicer */
+.case ul{margin:8px 0 18px 18px}
+.case li{margin:6px 0}
+
+/* Fancy steps */
+.steps{counter-reset:step}
+.steps li{list-style:none; margin:12px 0; position:relative; padding-left:38px}
+.steps li::before{
+  counter-increment:step; content:counter(step);
+  position:absolute; left:0; top:2px; width:26px; height:26px; border-radius:50%;
+  display:grid; place-items:center;
+  background:linear-gradient(135deg, var(--accent), color-mix(in srgb, var(--accent) 60%, #0a0f1a));
+  box-shadow:0 6px 14px color-mix(in srgb, var(--accent) 30%, #000);
+  border:1px solid rgba(255,255,255,.2);
+}
+
+/* Interactive mock grid */
+.mock-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr));
+  gap:16px; margin:18px 0 6px}
+.tile{
+  --t1:#7dd3fc; --t2:#60a5fa;
+  background:linear-gradient(135deg, color-mix(in srgb, var(--t1) 75%, #0b1220) 0%, color-mix(in srgb, var(--t2) 75%, #0b1220) 100%);
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:16px; padding:16px; min-height:150px; position:relative; overflow:hidden;
+  box-shadow: var(--case-glow); transform: translateY(0) scale(1); transition: transform .2s ease, box-shadow .2s ease;
+  color:#eef4ff; text-decoration:none;
+}
+.tile:hover{transform: translateY(-4px) scale(1.01); box-shadow: 0 18px 40px rgba(0,0,0,.45)}
+.tile .t-cap{font-weight:600; margin-bottom:6px}
+.tile .t-sub{opacity:.9; font-size:13px}
+
+/* small decorative “content” lines */
+.tile .art{
+  position:absolute; inset:auto -20% -15% -20%; height:90px;
+  background:
+    radial-gradient(50% 80% at 10% 20%, rgba(255,255,255,.35) 0, transparent 60%),
+    linear-gradient(90deg, rgba(255,255,255,.15) 0 30%, transparent 30% 70%, rgba(255,255,255,.15) 70%);
+  opacity:.35; transform: rotate(-6deg);
+}
+
+/* Reveal hook uses your existing IntersectionObserver */
+.reveal{opacity:0; transform:translateY(10px); transition:opacity .55s ease, transform .55s ease}
+.reveal.visible{opacity:1; transform:translateY(0)}
+
+/* Make sure background “floaties” never block clicks on case pages */
+.floaty{pointer-events:none; z-index:0}
+.case, .case-hero, .mock-grid, .tile, .hero-note{position:relative; z-index:1}
+
+/* Mobile tweaks */
+@media (max-width: 880px){
+  .hero-note{position:relative; width:auto; right:auto; top:auto; margin-top:14px}
+}
