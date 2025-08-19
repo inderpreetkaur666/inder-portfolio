@@ -194,3 +194,32 @@ h2 { margin:1.2em 0 .6em; }
   .hero { grid-template-columns:1fr; }
 }
 
+
+@media (max-width:900px) {
+  .hero { grid-template-columns:1fr; }
+}
+
+/* --- Fix for portfolio cards & clickable links --- */
+
+/* make card anchors render as blocks and look like cards */
+.card { 
+  display: block;              /* important: <a> becomes a block card */
+}
+
+/* ensure links inside grid cards don’t get underlined blue */
+.grid a { 
+  text-decoration: none; 
+  color: inherit;
+}
+
+/* glows should never block clicks */
+.floaty {
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* content should be above the glows */
+.container, .header, .section, .grid, .card {
+  position: relative;
+  z-index: 1;
+}
