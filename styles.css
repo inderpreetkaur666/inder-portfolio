@@ -223,3 +223,46 @@ h2 { margin:1.2em 0 .6em; }
   position: relative;
   z-index: 1;
 }
+
+
+/* ===== hard fixes: scrolling + clickability + block cards ===== */
+
+/* scrolling must be allowed */
+html, body {
+  height: auto !important;
+  min-height: 100vh;
+  overflow-y: auto !important;
+}
+
+/* the animated glow wrapper should not block vertical scroll */
+.bg-anim {
+  overflow-x: hidden !important;   /* keep horizontal hidden */
+  overflow-y: visible !important;  /* allow vertical scroll */
+}
+
+/* animated glows should never intercept clicks */
+.floaty,
+.f1, .f2, .f3 {
+  pointer-events: none !important;
+  z-index: 0 !important;
+}
+
+/* your real content must sit above the glows */
+.container, header, .header, .section, .grid, .card {
+  position: relative;
+  z-index: 1;
+}
+
+/* make portfolio “cards” true blocks so the whole tile is clickable */
+.card {
+  display: block;                 /* turn <a> into a block tile */
+}
+
+/* remove default link blue/underline inside grids */
+.grid a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* belts & suspenders: links render above anything weird */
+a { position: relative; z-index: 2; }
