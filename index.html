@@ -1,36 +1,83 @@
-<!doctype html><html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Home — Inderpreet Kaur</title><link rel="stylesheet" href="styles.css"></head>
-<body class="bg-anim"><div class="floaty f1"></div><div class="floaty f2"></div><div class="floaty f3"></div>
-<div class="container">
-<header class="header"><div class="logo">Inderpreet Kaur</div><nav class="nav">
-<a href="index.html">Home</a><a href="portfolio.html">Portfolio</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav></header>
-
-<section class="hero reveal"><div>
-  <h1>Marketing & Strategy Portfolio</h1>
-  <p>Paid media, digital marketing, category/portfolio operations, agency leadership, and collaborations — with a focus on clear storytelling and execution.</p>
-  <div class="badges"><span class="badge">Paid Search & Social</span><span class="badge">SEO & Content</span><span class="badge">Lifecycle Journeys</span><span class="badge">Category Ops</span><span class="badge">Agency Mgmt</span><span class="badge">Partnerships</span><span class="badge">Analytics</span></div>
-  <p><a class="btn" href="portfolio.html">View My Work</a></p>
-</div>
-<div class="card"><h3>Snapshot</h3><p>Roles across General Motors (Cadillac), Gap Inc. (Old Navy), Vox Mobile, HealthifyMe, and Taneja Consulting. Case studies are reconstructed with anonymized visuals to respect confidentiality.</p></div>
-</section>
-<section class="section reveal"><h2>Highlights</h2><div class="card-grid">
-  <a class="card" href="cadillac.html"><div class="snip"><div class="title">Cadillac — Launch</div></div><h3>Integrated Launch & Comms</h3><p>Briefs, workflows, dealer enablement.</p></a>
-  <a class="card" href="gap.html"><div class="snip"><div class="title">Old Navy — Toolkit</div></div><h3>Seasonal Retail Programs</h3><p>Playbooks, vendor coordination, store comms.</p></a>
-  <a class="card" href="vox.html"><div class="snip"><div class="title">Vox — Webinar</div></div><h3>B2B Content Engine</h3><p>Webinars, whitepapers, collateral.</p></a>
-  <a class="card" href="healthifyme.html"><div class="snip"><div class="title">HealthifyMe — Journeys</div></div><h3>Lifecycle Marketing</h3><p>Email/SMS/app flows, experiments.</p></a>
-  <a class="card" href="taneja.html"><div class="snip"><div class="title">Taneja — Events</div></div><h3>Events & Internal Comms</h3><p>Newsletters, invites, onboarding.</p></a>
-</div></section>
-
-<footer class="footer">
-  © Inderpreet Kaur • Ontario, Canada • 
-  <a href="mailto:inderpreetkaur666@gmail.com">Email Me</a> • +1 4383558066
-</footer>
-
-<script src="assets/site.js"></script>
-</body>
-</html>
-
-<script src="assets/site.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inderpreet Kaur – Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s, box-shadow 0.2s;
+      text-decoration: none;
+      color: black;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+    }
+    .card h2 {
+      margin-top: 0;
+    }
+    .tag {
+      background: #0077ff;
+      color: white;
+      font-size: 12px;
+      padding: 4px 8px;
+      border-radius: 6px;
+      display: inline-block;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Portfolio – Case Studies</h1>
+  <div class="grid">
+    <a href="cadillac.html" class="card">
+      <h2>Cadillac</h2>
+      <p>Integrated Launch & Communications</p>
+      <span class="tag">Automotive</span>
+    </a>
+    <a href="gap.html" class="card">
+      <h2>Gap Inc. (Old Navy)</h2>
+      <p>Retail Marketing & Campaign Execution</p>
+      <span class="tag">Retail</span>
+    </a>
+    <a href="taneja.html" class="card">
+      <h2>Taneja Consulting</h2>
+      <p>Sales & Marketing Strategy</p>
+      <span class="tag">Consulting</span>
+    </a>
+    <a href="vox.html" class="card">
+      <h2>Vox Mobile</h2>
+      <p>Enterprise Solutions & Sales Enablement</p>
+      <span class="tag">SaaS</span>
+    </a>
+    <a href="healthifyme.html" class="card">
+      <h2>HealthifyMe</h2>
+      <p>Upsell Campaigns & Customer Growth</p>
+      <span class="tag">Health Tech</span>
+    </a>
+  </div>
 </body>
 </html>
