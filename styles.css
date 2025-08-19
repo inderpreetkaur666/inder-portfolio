@@ -148,17 +148,25 @@ h2 { margin:1.2em 0 .6em; }
 }
 
 /* ---------------------------
-   Reveal on scroll
-   --------------------------- */
+ /* --------------------------
+   Reveal on scroll (progressive)
+   -------------------------- */
 .reveal {
-  opacity:0;
-  transform:translateY(12px);
-  transition:opacity .6s ease, transform .6s ease;
+  opacity: 1;
+  transform: none;
 }
-.reveal.visible {
-  opacity:1;
-  transform:translateY(0);
+
+.js .reveal {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity .6s ease, transform .6s ease;
 }
+
+.js .reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 
 /* ---------------------------
    Active nav highlight
